@@ -2,20 +2,21 @@ body {
   margin: 0px;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 .box {
-  width: 700px;
-  height: 700px;
+  width: 50%;
+  aspect-ratio: 1;
   display: flex;
   flex-wrap: wrap;
 }
 
 .square {
   border: solid;
-  box-sizing: border-box;
-  width: 6.25%;
+  box-sizing: border-box; 
   aspect-ratio: 1;
 }
