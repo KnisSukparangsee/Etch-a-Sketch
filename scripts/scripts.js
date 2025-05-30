@@ -22,6 +22,14 @@ for (let i = 0; i < 16 * 16; i++) {
 
   square.classList.add("square");
   square.style.width = `${100 / 16}%`;
+
+  const red = (Math.random() * 256);
+  const green = (Math.random() * 256);
+  const blue = (Math.random() * 256);
+
+  square.addEventListener("mouseenter", (event) => {      
+    square.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+  })
 }
 
 function createGrid(n) {
@@ -37,8 +45,12 @@ function createGrid(n) {
     square.classList.add("square");
     square.style.width = `${100 / n}%`;
 
-    square.addEventListener("mouseenter", (event) => {
-      square.style.backgroundColor = "orange";
+    const red = (Math.random() * 256);
+    const green = (Math.random() * 256);
+    const blue = (Math.random() * 256);
+
+    square.addEventListener("mouseenter", (event) => {      
+      square.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
     })
   }
   console.log(squares.length);
