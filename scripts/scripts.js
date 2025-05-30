@@ -27,10 +27,15 @@ for (let i = 0; i < 16 * 16; i++) {
   const green = (Math.random() * 256);
   const blue = (Math.random() * 256);
 
+  let opacity = 0;
+
   square.addEventListener("mouseenter", (event) => {      
     square.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+
+    opacity = opacity === 1 ? 1 : opacity + 0.1;
+    square.style.opacity = opacity;
   })
-}
+};
 
 function createGrid(n) {
   const squares = document.querySelectorAll(".square");
@@ -49,9 +54,13 @@ function createGrid(n) {
     const green = (Math.random() * 256);
     const blue = (Math.random() * 256);
 
+    let opacity = 0;
+
     square.addEventListener("mouseenter", (event) => {      
       square.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
-    })
+      
+      opacity = opacity === 1 ? 1 : opacity + 0.1;
+      square.style.opacity = opacity;
+    });
   }
-  console.log(squares.length);
-}
+};
