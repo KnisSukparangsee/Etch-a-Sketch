@@ -1,10 +1,21 @@
 body {
   margin: 0px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.container {
-  background-color: gray;
-  padding: 10px;
-  width: 100vw;
-  height: 100vh;
+.box {
+  width: 700px;
+  height: 700px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  border: solid;
+  box-sizing: border-box;
+  width: 6.25%;
+  aspect-ratio: 1;
 }
